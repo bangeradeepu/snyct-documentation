@@ -705,7 +705,24 @@ const App = () => {
 
         <div className="sidebar-footer">
           <div className="footer-text">
-            <div>support@snyct.com</div>
+            <div>
+              <a href="https://github.com/bangeradeepu/snyct-documentation" target="_blank" style={{textDecoration:'none', color:'black'}} rel="noopener noreferrer">
+              <div className="d-flex gap-2 align-items-center">
+                <i className="bi bi-github c-pointer" style={{ fontSize: "2rem" }}></i>
+                <p className="mb-0">Documentaion</p>
+              </div>
+              </a>
+            </div>
+
+            <div>
+              <a href="https://github.com/bangeradeepu/autofill-sdk" target="_blank" style={{textDecoration:'none', color:'black'}} rel="noopener noreferrer">
+              <div className="d-flex gap-2 align-items-center">
+                <i className="bi bi-github c-pointer" style={{ fontSize: "2rem" }}></i>
+                <p className="mb-0">SDK</p>
+              </div>
+              </a>
+            </div>
+           
             <div className="version">v1.0.0</div>
           </div>
         </div>
@@ -884,6 +901,44 @@ const extractData = async () => {
                 id="basic-setup"
               />
             </Section>
+            <Section title="Get Your API Key">
+  <div className="mb-4">
+    <p className="text-secondary mb-3">
+      Login to <strong>snyct.com</strong> and get <span className="fw-bold text-dark">1000 document extraction credits</span> for free on first login!
+    </p>
+    
+    <div className="d-flex align-items-center gap-3 mb-3">
+      <a 
+        href="https://snyct.com/login" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="btn btn-dark rounded-0 px-4 py-2 d-inline-flex align-items-center hover-lift"
+        style={{ textDecoration: 'none' }}
+      >
+        <i className="bi bi-box-arrow-in-right me-2"></i>
+        Login to snyct.com
+      </a>
+      
+      <a 
+        href="https://github.com/bangeradeepu/autofill-docs" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="btn btn-outline-dark rounded-0 px-4 py-2 d-inline-flex align-items-center hover-lift"
+        style={{ textDecoration: 'none' }}
+      >
+        <i className="bi bi-github me-2"></i>
+        GitHub Repository
+      </a>
+    </div>
+    
+    <div className="mt-3 p-3 bg-light border border-dark">
+      <p className="small mb-0">
+        <i className="bi bi-info-circle-fill me-2 text-dark"></i>
+        After login, your API key will be available in your dashboard. Copy it and start extracting documents instantly!
+      </p>
+    </div>
+  </div>
+</Section>
           </>
         )}
 
@@ -1034,7 +1089,7 @@ app.listen(3000);`}
 
             <Section title="Endpoint">
               <CodeBlock
-                code="POST https://autofill-backend-production.up.railway.app/api/extract"
+                code="POST https://api.snyct.com/api/extract"
                 language="bash"
                 id="endpoint"
               />
